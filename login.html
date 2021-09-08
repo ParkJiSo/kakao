@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kakao</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/footer.css">  
+    <link media="screen and (max-width:639px)" rel="stylesheet" href="css/stylem.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/js.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div class="login_wrap">
+        <div class="video_box">
+            <video src="../img/at11/test.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+        </div>
+        <div class="log_box">
+        <div>
+            <img src="img/at12/join_logo.png" alt="">
+        </div>
+        <form name="jsp" id="login">
+            <p class="login_txt">
+                <span>이메일</span>
+                <input type="text" id="id" maxlength="20" placeholder="아이디 입력하세요.">
+                <span class="email"><strong>@Kakao.com</strong></span>
+            </p>
+            <ul class="login_infor login_id_infor">
+                <li>아이디를 입력하세요.
+                    <p>닫기</p>
+                </li>
+              </ul>
+              <ul class="login_infor login_id4_infor">
+                <li>아이디를 4자 이상 입력해 주세요.
+                    <p>닫기</p>
+                </li>
+              </ul>
+              <ul class="login_infor login_idE_infor">
+                <li>영문으로 아이디를 입력해 주세요.
+                    <p>닫기</p>
+                </li>
+              </ul>
+            <p class="login_txt">
+                <span>비밀번호</span>
+                <input type="password" id="pw" name="password" placeholder="비밀번호 입력하세요.">
+            </p>
+            <ul class="login_infor login_pw_infor">
+                <li>비밀번호는 8자 이상 입력하세요.
+                    <p>닫기</p>
+                </li>
+              </ul>
+        </form>
+        <form action="index.html" class="login_bar" onsubmit="return login_func()">
+            <input type="submit" value="Login">
+          </form>
+        </div>
+    </div>
+    <footer id="footer" style="top:0;"></footer>
+</body>
+</html>

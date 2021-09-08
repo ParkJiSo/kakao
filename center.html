@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kakao</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/footer.css"> 
+    <link media="screen and (max-width:639px)" rel="stylesheet" href="css/stylem.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/js.js"></script>
+    <script>
+        $(function(){
+         var num=0,
+             button = $(".button>.page_wrap>.btn>a"),
+             layout = $(".table_layout2>ul"),
+             left = $(".button2>.page_wrap>.btnlb"),
+             right = $(".button2>.page_wrap>.btnrb"),
+             first = $(".button2>.page_wrap>.btnll"),
+             end = $(".button2>.page_wrap>.btnrr");
+             
+         button.click(function(){
+             var  i = $(this).index();
+             button.removeClass();
+             $(this).addClass("active");
+     
+             layout.removeClass();
+             layout.eq(i).addClass("list");
+             num = i; //left와 right 클릭시 현재 page숫자를 알아야하니까 
+         })
+         
+     
+         left.click(function(){
+             num = num -1;
+             if(num<0){
+                 num=0;
+                 return; //진행 stop
+             }
+             motion();
+         })
+     
+         right.click(function(){
+             var listNum = $(".button2>.page_wrap>.btn>a").length;
+             num = num+1;
+             if(num>=listNum){
+                 num =listNum-1;
+                 return; //진행 stop
+             }
+             motion();
+         })
+     
+         first.click(function(){
+             button.removeClass();
+             button.eq(0).addClass("active");
+     
+             layout.removeClass();
+             layout.eq(0).addClass("list");
+         })
+     
+         end.click(function(){
+             var listNum = $(".button2>.page_wrap>.btn>a").length;
+     
+             button.removeClass();
+             button.eq(listNum-1).addClass("active");
+     
+             layout.removeClass();
+             layout.eq(listNum-1).addClass("list");
+         })
+     
+         function motion(){
+             button.removeClass();
+             button.eq(num).addClass("active");
+     
+             layout.removeClass();
+             layout.eq(num).addClass("list");
+         }
+         var cur=10;
+         var isOn=0;
+         $(".table_tr>div").hide();
+     
+         $(".table_tr").click(function() {
+                     
+             if(isOn == 1){
+                 cur=10;
+             }
+             var i = $(this).index();
+             if(cur!=i){
+             $(".table_tr>div").hide();
+             $(".table_layout>ul>li>span img").removeClass("on");
+             $(this).find("img").addClass("on");
+             $(this).find(".table_txt").slideDown();
+             isOn=2;
+             } else {
+             $(".table_layout>ul>li>span img").removeClass("on");
+             $(this).find(".table_txt").slideUp();
+             isOn=1;
+             }		
+             cur=i;
+         });
+     
+     });
+     </script>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none}
+        a{text-decoration:none; color: black;}
+        img{vertical-align: middle;}
+        html,body{height: 100%;}
+    </style>
+</head>
+
+
+<body>
+    <header id="header"></header>
+    <div id="menu">
+        <div id="menu_title">
+            <h1>Kakao <strong>Customer</strong></h1>
+            <div></div>
+        </div>
+        <div class="section section2">
+            <h2>
+                <img src="img/at0/top_logo.png" alt=""><span>공지사항</span>
+                <span><i class="far fa-comment-dots"></i><a href="#">고객문의 작성하기</a></span>
+            </h2>
+            <div class="table_layout table_layout2 show_layout2">
+                <ul class="list">
+                    <li class="table_tr">
+                        <span class="num">20</span>
+                        <strong class="subject">'웹툰앱' 서비스 기능 오류 안내 (8/9월)</strong>
+                        <span>
+                        <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-08-09</span>
+                        <div class="table_txt">
+                            안녕하세요.<br>
+                            웹툰앱 서비스에서 쿠키 결제 후 캐시가 지급되지 않는 현상이 발생하였고,
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 8월 9일
+                        </div>
+                    </li>
+             
+                    <li class="table_tr">
+                        <span class="num">19</span>
+                        <strong class="subject">'다음 지도'서비스 기능 오류 안내 (7/28 수)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-07-28</span>
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            지도 서비스에서 도로명 주소 검색 시 바다로 노출되는 오류 현상이<br>7/28(수) 8시 30분부터 
+                            7/29(목) 20시 5분까지 발생하여<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 7월 27일
+                        </div>
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">18</span>
+                        <strong class="subject">'카카오 메일' 서비스 기능 오류 안내 (7/27 화)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-07-27</span>
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            메일 서비스에서 메일 발송 실패 후 임시보관함에 이동되는 현상이 발견하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 7월 27일
+                        </div>
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">17</span>
+                        <strong class="subject">'우리동네 백신알림' 서비스 일시적 접속불가 안내 (7/27 화)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-07-27</span>
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            우리동네 백신알림 서비스에서 7/27 (화) 15시 07분부터 7/28(수) 16시 30분까지<br>
+                            새로고침 시 화면이 멈추는 현상이 발생하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 7월 27일
+                        </div>     
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">16</span>
+                        <strong class="subject">'카카오 PC게임' 서비스 접속불가 안내 (7/8 목)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-07-08</span> 
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            카카오 PC게임 서비스에서 웹페이지에 접속되지 않는 현상이 발생하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 7월 8일
+                        </div>    
+                    </li>
+                </ul>
+                <ul>
+                    <li class="table_tr">
+                        <span class="num">15</span>
+                        <strong class="subject">다음 '카페앱' 서비스 기능 오류 안내 (6/24 목)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-06-24</span>   
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            카페앱 서비스에서 댓글이 정상적으로 실행되지 않는 현상이 발생하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 6월 25일
+                        </div>  
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">14</span>
+                        <strong class="subject">다음 '블로그' 서비스 기능 오류 안내 (6/9 수)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-06-09</span> 
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            블로그 서비스에서 위젯, 배너가 정상적으로 노출되지 않는 현상이 발생하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다<br>
+                            2021년 6월 9일
+                        </div>    
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">13</span>
+                        <strong class="subject">'카카오 인증서' 서비스 휴대폰 이증 오류 안내 (6/7 월)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-06-07</span>     
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            카카오 인증서 서비스에서 휴대폰 인증 오류 현상이 발생하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 6월 7일
+                        </div>
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">12</span>
+                        <strong class="subject">다음 '지도' 서비스 기능 오류 안내 (6/3 목)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-06-03</span>  
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            지도 서비스에서 리뷰 게시글 내 지도 선택시 오류가 노출되는 현상이 
+                            발견하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다<br>
+                            2021년 6월 3일
+                        </div>   
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">11</span>
+                        <strong class="subject">'우리동네 백신알림'서비스 기능 실행오류 안내 (6/2 수)</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-06-02</span> 
+                        <div class="table_txt">
+                            안녕하세요.<br><br>
+                            우리동네 백신 알림 서비스에서 잔여백신 알림 신청 시 다음으로 
+                            넘어가지 않는 현상이 발생하였고,<br>
+                            긴급점검을 진행하여 현재는 정상적으로 서비스를 이용하실 수 있습니다.<br>
+                            보다 안정적인 서비스를 위해 최선을 다하는 카카오가 되겠습니다.<br><br>
+                            감사합니다.<br>
+                            2021년 6월 2일
+                        </div>    
+                    </li>
+                </ul>
+                <ul>
+                    <li class="table_tr">
+                        <span class="num">10</span>
+                        <strong class="subject">Android 일부 기기에서 카카오톡이 원활하게 실행되지 않는 현상</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2021-03-23</span> 
+                        <div class="table_txt">
+                            카카오톡 서비스 이용에 불편을 드려 죄송합니다.<br>
+                            현재 'Android 시스템 Webview' 애플리케이션과의 충돌로<br>
+                            카카오톡을 포함한 다른 애플리케이션에서 일부 발생하고 있는 것으로 알려져 있습니다.
+                            번거로우시더라도 아래의 방법을 통해 'Android 시스템 Webview' 애플리케이션을 업데이트하시어
+                            이후 문제가 반복되는지 확인 부탁드립니다.<br>
+                            *Play 스토어 애플리케이션 실행 > 'Android 시스템 Webview' 검색 > Android 시스템 Webview 페이지
+                            진입하여 업데이트 실행<br>
+                            OS 또는 휴대기기 환경과 관련된 문제로 즉각 해결해드리지 못하는 점 양해 부탁드립니다.
+                        </div>    
+                    </li> 
+                    <li class="table_tr">
+                        <span class="num">9</span>
+                        <strong class="subject">웹채팅 서비스가 적용되었습니다.</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2020-02-06</span>   
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br>
+                            카카오 고객센터 이용에 편의를 더하기 위해 '웹채팅' 서비스를 적용하였습니다.<br>
+                            또는 상담시간 외에는 365일 24시간 운영되는 챗봇과 도움말을 통해 도움을 받으실 수 있습니다.<br><br>
+                            *상담시간<br>
+                            - 카카오 고객센터 : 평일 오전 10시 ~ 오후 6시 30분<br>
+                            - 카카오 for 비즈니스 고객센터 : 평일 오전 9시 ~ 오후 6시
+                        </div>  
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">8</span>
+                        <strong class="subject">카카오 for 비즈니스 상담톡 점심시간 운영 안내</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2019-12-02</span> 
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br>
+                            최근 감정노동자에 대한 처우 개선 등 사회적 공감대를 고려하여<br>
+                            카카오 for 비즈니스 고객센터의 점심시간을 운영할 예정으로 안내드립니다.<br>
+                            궁금하신 점이 있다면 365일, 24시간 언제든지 상담 챗봇의 도움을 받으실 수 있습니다.<br><br>
+                            <strong>[Kakao for 비즈니스 상담톡 점심시간 운영 안내]</strong><br>
+                            - 배경 : 고객센터 상담원의 근로환경 개선<br>
+                            - 상담시간 : 오전 상담 9시~12시, 오후 상담 13시~18시(12시~13시 점심시간)<br>
+                            - 시행일 2019년 12월 9일 (월)<br>
+                            건강한 상담 문화를 위하여 다소 불편한 점이 있으시더라도 너른 마음으로 이해 부탁드립니다.
+                            고객센터의 근무환경과 서비스 품질 개선으로 고객께 보답하겠습니다.
+                        </div> 
+                    </li>  
+                    <li class="table_tr">
+                        <span class="num">7</span>
+                        <strong class="subject">고객센터 시스템 점검 안내드립니다.</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2019-09-30</span>  
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br>
+                            카카오 서비스를 이용해 주셔서 감사드리며, 
+                            고객센터 시스템 점김 작업 관련 안내 말씀 드립니다.<br>
+                            보다 안전한 서비스 제공을 위해 시스템 점검 작업을 진행할 예정입니다.<br>
+                            점심 시간 동안 1:1 문의 및 상담 서비스 이용이 불가능하오니 이용에 참고하여 주시기 
+                            바랍니다<br><br>
+                            <strong>1. 작업시간</strong><br>
+                            -10/8(화) 오전 12시 30분 ~ 오전 5시<br>
+                            (점검 시간은 다소 늘어날 수 있습니다.)<br><br>
+                            <strong>2. 작업 영향</strong><br>
+                            - 다음 / 카카오 센터, 앱 내 1:1 문의<br>
+                            서비스 이용에 불편을 드리게 되어 다시 한 번 사과드리며,<br>
+                            시스템 점검과 관련된 궁금한 점이나 소중한 의견은 언제든지 고객센터로 문의드립니다.<br>
+                            감사합니다.
+                        </div>
+                    </li>  
+                    <li class="table_tr">
+                        <span class="num">6</span>
+                        <strong class="subject">11/1부터 카카오 고객센터 전화상담이 톡상담으로 전환됩니다.</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2018-10-25</span> 
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br>
+                            카카오를 이용해 주시는 고객님들께 안내 말씀 드립니다.<br>
+                            카카오에서는 고객님들께 더 쉽고 편리한 상담을 제공하기 위해<br>
+                            카카오톡을 이용한 톡상담 서비스를 오픈하였습니다.<br><br>
+                            * 카카오 앱에서 이용하기<br>
+                            * 카카오톡 > 친구 검색에서 '카카오 고객센터' 로 검색 후 채팅하기 선택<br>
+                            - <strong>'카카오 고객센터' 플러스 친구 바로 가기</strong><br>
+                            보다 나은 서비스를 제공하기 위해 노력하는 카카오가 되겠습니다<br>
+                            감사합니다.
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="table_tr">
+                        <span class="num">5</span>
+                        <strong class="subject">카카오 고객센터 상담챗봇 오픈 안내</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2018-10-25</span> 
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br>
+                            카카오를 이용해 주시는 고객님들께 안내 말씀 드립니다.<br>
+                            카카오에서는 고객님들께 더 쉽고 편리한 상담을 제공하기 위해<br>
+                            카카오 고객센터 상담챗봇을 오픈하였습니다.<br><br>
+                            <strong>* 내가 원할 때 언제 어디서나 가능해요.</strong><br>
+                            24시간 365일 언제든지 상담이 가능합니다.<br>
+                            직원과 직접 상담하기 어려웠던 심야시간, 휴일에도 궁금한 내용이 있으면
+                            언제든지 물어보세요.<br><br>
+                            <strong>* 들었지만 기억이 안 나도 이제는 괜찮아요.</strong><br>
+                            복잡하고 어려운 내용도 빠르게 이해할 수 있도록 동영상 및 이미지를
+                            추가하였습니다.<br>
+                            예시) 카카오톡 전화번호 변경 / 카톡 백업방법 / 다음메일 수신 불가/
+                            선물하기 환불 적립금<br><br>
+                            <strong>* 상담 챗봇으로 답을 얻지 못하셔도 괜찮습니다.</strong><br>
+                            상담 챗봇과 대화 중 '상담원으로 전환하기'를 선택하시면 친절한 
+                            상담원이 도와드립니다.<br>
+                            단, 상담원과의 상담은 아래 고객센터 운영시간을 참고해 주시기 바랍니다.<br>
+                            -카카오 고객센터 : 월-금 10시~18시 30분<br>
+                            -카카오 for 비즈니스 : 월-금 09시~18시<br><br><br>
+                            카카오 고객센터 / 카카오 for 비즈니스 상담챗봇은 다음과 같이 
+                            이용하실 수 있습니다<br><br>
+                            <strong>* 카카오톡 앱에서 이용하기</strong><br>
+                            - 카카오톡 > 친구 검색에서 '카카오 고객센터'로 검색 후 채팅하기 선택<br>
+                            ㄴ 카카오와 다음 서비스 이용자를 위한 '카카오 고객센터' 플러스친구 바로가기<br><br>
+                            - 카카오톡 > 친구 검색에서 '카카오 for 비즈니스' 로 검색 후 채팅하기 선택<br>
+                            ㄴ 카카오 광고주 및 판매자 등 비즈니스 파트너를 위한 '카카오 for 비즈니스' 플러스친구 바로가기<br><br>
+                            메세지 입력창에서 '시작, 홈, 챗봇' 등의 단어를 입력하시거나,<br>
+                            궁금하신 내용을 간단히 질문하시면 상담챗봇 도움이 시작됩니다<br><br>
+                            보다 나은 서비스를 제공하기 위해 노력하는 카카오가 되겠습니다<br>
+                            감사합니다.
+                        </div>
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">4</span>
+                        <strong class="subject">6/28(목) 고객센터 시스템 점검 안내</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2018-06-21</span> 
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br>
+                            <strong>6/28(목)</strong>보다 안정적인 서비스 제공을 위해 <strong>고객센터 시스템 점검 작업</strong>
+                            이 진행될 예정입니다.<br><br>
+                            <strong>* 작업일시 : 2018년 6월 28일 (목) 00:00 ~ 05:00 (5시간)</strong><br>
+                            <strong>* 제한 서비스 : 웹/앱 고객센터 내 문의하기, 문의내역 확인 메뉴</strong><br><br>
+                            서비스 이용에 불편을 드려 대단히 죄송합니다.<br>
+                            점검 후 보다 원활한 서비스 환경으로 찾아 뵙겠습니다.<br><br>
+                            <em>* 유해정보 및 권리침해 관련하여 긴급한 문의가 있을 경우 1577-3357로 연락 주시기 바랍니다.</em><br><br>
+                            감사합니다.
+                        </div>
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">3</span>
+                        <strong class="subject">카카오 고객센터 문의내역 조회 제한 안내</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2018-02-19</span> 
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br>
+                            보다 안정적인 서비스 제공을 위해 DB작업을 실시할 예정으로,<br>
+                            아래 작업 시간 동안 고객센터 문의내역 조회가 불가함을 알려드립니다<br><br>
+                            <strong>* 작업 시간 : 2/23(금) 오전 12시 ~ 오전 05시 (작업시간은 다소 늘어날 수 있습니다></strong><br>
+                            <strong>* 작업 영향 : 카카오 고객센터 문의내역 조회 불가 (문의 등록은 가능합니다.)</strong><br>
+                            <strong>* 영향 서비스 : 카카오톡, 카카오스토리, 카카오페이지, 카카오뮤직, 카카오 게임샵</strong><br><br>
+                            서비스 이용에 불편을 드린 점 다시 한 번 사과 드리며,<br>
+                            시스템 작업과 관련한 궁금한 점이나 소중한 의견은 언제든지 고객센터로 문의해 주시기 바랍니다.<br><br>
+                            고맙습니다.
+                        </div>
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">2</span>
+                        <strong class="subject">추석 연휴 카카오 고객센터 휴무 안내</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2017-09-28</span> 
+                        <div class="table_txt">
+                            안녕하세요. 카카오 고객센터입니다.<br><br>
+                            카카오 서비스를 이용해주시는 고객님들께 깊은 감사의 말씀 전하며,<br>
+                            추석 연휴 기간 동안 고객센터 휴무 안내드립니다.<br><br>
+                            <strong>[추석 연휴 고객센터 휴무 안내]</strong><br>
+                            - 휴무기간 : 2017. 09. 30 (토) ~ 2017. 10. 09 (월)<br><br>
+                            고객센터 휴무로 상기 기간 동안에는 전화 및 메일 상담이 어렵습니다.<br><br>
+                            되도록 10월 10일 이후 문의 부탁드리며,<br>
+                            휴무기간 동안 남겨주신 메일 문의는 10월 10일부터 순차 답변드릴 예정으로<br>
+                            회신이 늦어질 수 있는 점 미리 양해 부탁드립니다.<br><br>
+                            소중한 분들과 즐겁고 풍요로운 한가위 보내시길 바랍니다.<br><br>
+                            감사합니다. 
+                        </div>
+                    </li>
+                    <li class="table_tr">
+                        <span class="num">1</span>
+                        <strong class="subject">카카오 고객센터 개편 안내 말씀드립니다.</strong>
+                        <span>
+                            <img class="center_down" src="img/at9/m_menu_down.png" alt="">
+                        </span>
+                        <span class="date">2017-09-05</span> 
+                        <div class="table_txt">
+                        안녕하세요. 카카오 고객센터입니다.<br><br>
+                        <strong>8월 22일</strong>카카오 앱 고객센터가 새로워집니다.<br><br>
+                        새로워진 카카오 고객센터에서는<br>
+                        카카오 서비스를 이용하시면서 궁금하신 점을 보다 쉽고 빠르게 찾아보실 수 있도록<br>
+                        디자인을 변경하고 문의하기 및 페이지를 개선하였습니다<br><br>
+                        더 친절하고 빠르게 고객님의 궁금증을 해결해 드리는 카카오 고객센터가 되기 위해 노력하겠습니다.<br>
+                        감사합니다.
+                    </div>
+                    </li>  
+                </ul>
+                <div class=""></div>
+                <div class="button button2">
+                    <div class="page_wrap">
+                        <a href="javascript:;" class="btnll">
+                            <img src="img/at9/arrow_ll.gif" alt="">
+                        </a>
+                        <a href="javascript:;" class="btnlb">
+                            <img src="img/at9/arrow_lb.gif" alt="">
+                        </a>
+                        <span class="btn">
+                            <a href="javascript:;" class="active">1</a>
+                            <a href="javascript:;">2</a>
+                            <a href="javascript:;">3</a>
+                            <a href="javascript:;">4</a>
+                        </span>
+                        <a href="javascript:;" class="btnrb">
+                            <img src="img/at9/arrow_rb.gif" alt="">
+                        </a>
+                        <a href="javascript:;" class="btnrr">
+                            <img src="img/at9/arrow_rr.gif" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" style="top:20%"></footer>
+</body>
+</html>
