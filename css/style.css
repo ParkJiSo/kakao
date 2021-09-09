@@ -1105,6 +1105,7 @@ header nav > #menu > .btmMenu > li > .sub li > a:hover:after {
 /* at3 뉴스 img */
 .news_box .img {
     margin-top: 90px;
+    margin-left: -5%;
     width: 100%; height: 280px;
     border: 0px solid black;
     border-bottom-right-radius: 20px;
