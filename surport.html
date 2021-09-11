@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kakao</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/footer.css"> 
+    <link media="screen and (max-width:639px)" rel="stylesheet" href="css/stylem.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+    <script src="js/js.js"></script>
+    <script>
+        $(function(){
+            $("#suv_wrap").hide();
+            $("#db_wrap").hide();
+            $("#staff_wrap").hide();
+            $("#tech_wrap").show();
+            $(".table_tit>li>a:eq(0)").css("color","white")
+        $(".table_tit>li>a").on("click",function() {
+            no=$(this).index;
+            $(".table_tit>li>a").css("color","gray")
+            $(this).css("color","white");
+    });
+
+        $(".table_tit>li:nth-child(1)").on("click",function() {
+            $("#suv_wrap").hide();
+            $("#db_wrap").hide();
+            $("#staff_wrap").hide();
+            $("#tech_wrap").show();
+       
+    });
+        $(".table_tit>li:nth-child(2)").on("click",function() {
+            $("#tech_wrap").hide();
+            $("#db_wrap").hide();
+            $("#staff_wrap").hide();
+            $("#suv_wrap").show();
+    }); 
+    $(".table_tit>li:nth-child(3)").on("click",function() {
+        $("#tech_wrap").hide();
+        $("#suv_wrap").hide();
+        $("#staff_wrap").hide();
+        $("#db_wrap").show();
+    }); 
+    $(".table_tit>li:nth-child(4)").on("click",function() {
+        $("#tech_wrap").hide();
+        $("#suv_wrap").hide();
+        $("#db_wrap").hide();
+        $("#staff_wrap").show();
+
+    }); 
+
+    });
+     </script>
+</head>
+<body>
+    <div class="clogo">
+        <a href="index.html"><img src="img/at12/join_logo.png" alt="logo"></a>
+    </div>
+    <div id="crew_menu">
+        <div class="topMenu">
+            <a href="login.html" id="login">로그인</a> 
+            <span><i class="fas fa-sort-down"></i></span>
+        </div>
+    </div>
+    <div class="surport_wrap">
+        <ul class="table_tit">
+            <li>
+                <a href="#">테크<span>10</span></a>
+            </li>
+            <li>
+                <a href="#">서비스비즈<span>5</span></a>
+            </li>
+            <li>
+                <a href="#">디자인/브랜드<span>1</span></a>
+            </li>
+            <li>
+                <a href="#">스태프<span>10</span></a>
+            </li>
+        </ul>
+        <ul class="sub_wrap" id="tech_wrap">
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">2022 카카오 신입개발자 블라인드 채용 - Programming &amp; Infra/DB/보안 분야 소개</h4></a>
+                            <dl class="list_info">
+                                <dt class="screen_out"></dt>
+                                <dd>
+                                    영업종료시
+                                </dd>
+                                <dt class="screen_out"></dt>
+                                <dd>
+                                    | 판교
+                                </dd>
+                            </dl>
+                            <div class="wrap_tag">
+                                <a href="#"><span class="txt_hash">#</span>기타</a>
+                            </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">카카오 전문연구요원(전직 및 보충역) 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">근무지</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Android
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                iOS
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Web front
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                System
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Network
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Cloud
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                DB
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                 Security
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Algorithm/ML
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Algorithm/Ranking
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Hadoop eco system
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Server
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Statistics/Analysis
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                기타
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div> 
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[카카오맵] (경력)컴퓨터 비전 전문가 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Algorithm/ML
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                기타
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[인프라](경력) 사내인프라 네트워크 운영자 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                 Network
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[광고 추천] 데이터 과학자, 기계학습(머신러닝) 전문가 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Algorithm/ML
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Algorithm/Ranking
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">카카오 API플랫폼 개발자 모집 (경력)</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Android
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                iOS
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Web front
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Server
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">카카오톡 뷰탭, 다음앱 서비스 클라이언트 개발자 모집 (Android, iOS)</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Android
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                iOS
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[카카오톡] macOS 클라이언트 개발자 모집 (경력)</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                iOS
+                            </a>
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                기타
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[카카오맵] (경력) 서버 개발자 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Server
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">빌링플랫폼 (정산) 개발자 모집 (경력)</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                        <div class="wrap_tag">
+                            <a href="#">
+                                <span class="txt_hash">#</span>
+                                Server
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+        <ul class="sub_wrap" id="suv_wrap">
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[카카오페이구매] 서비스 운영 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">광고 플랫폼 기획자 모집 (경력)</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                2021년 9월 30일 까지
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[톡비즈플랫폼] 서비스/프로모션 운영 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[파트너비즈전략팀] (경력) 비즈니스 데이터 분석가 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                2021년 10월 31일 까지
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[톡비즈플랫폼] (경력) 사업기획/사업개발 담당 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                2021년 9월 30일 까지
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>카카오</dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>정규직</dd>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+        <ul class="sub_wrap" id="db_wrap">
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">카카오 영입 및 교육을 위한 영상 컨텐츠 촬영/편집 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+        <ul class="sub_wrap" id="staff_wrap">
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">미래디스커버리실 스타트업 발굴/리서치 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">인재 Sourcing 담당자 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                2021년 9월 26일 까지
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            계약직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">IR 담당자 모집 (경력)</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                2021년 9월 30일 까지
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">오피스 이전설치를 위한 업무 보조 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">[성장문화팀] 구성원 성장 & 문화 프로그램 기획과 운영</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                2021년 9월 29일 까지
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            정규직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">직군 성장 프로그램 운영 지원 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">소셜임팩트(사회공헌) 행정지원 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">(경력) 임원 비서 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            계약직
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">카카오 IT 자산관리 업무 지원 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="area_info">
+                    <div class="wrap_info">
+                        <a href="#"><h4 class="tit_jobs">카카오 ESG (환경 부분) 업무 보조 어시스턴트 모집</h4></a>
+                        <dl class="list_info">
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                영업종료시
+                            </dd>
+                            <dt class="screen_out">영업마감일</dt>
+                            <dd>
+                                | 판교
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="sub_info">
+                        <dd>
+                            카카오
+                        </dd>
+                    </dl>
+                    <dl class="sub_info">
+                        <dd>
+                            어시스턴트
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer id="footer" style="top:5%"></footer>
+</body>
+</html>
