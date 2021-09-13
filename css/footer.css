@@ -1,0 +1,42 @@
+
+#footer {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    max-width: 952px;
+    margin: 0 auto;
+    padding: 0px 0 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#footer>a {
+    width: 100%;
+    font-weight: bold;
+    padding: 0px 0px;
+    cursor: pointer;
+    letter-spacing: -1px;
+}
+#footer>a>i {
+    padding: 1%;
+}
+#footer>a:hover {
+    font-weight: bold;
+    color: gray;
+}
+
+
+@media all and (max-width:639px) {
+    #footer {
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        max-width: 639px;
+        margin: 0 auto;
+        padding: 0px 0 20px;
+        text-align: center;
+        font-size: 10px;
+    }
+}
